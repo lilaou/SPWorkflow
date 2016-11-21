@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<List xmlns:ows="Microsoft SharePoint" Title="UserStory" FolderCreation="FALSE" Direction="$Resources:Direction;" Url="Lists/UserStory" BaseType="0" xmlns="http://schemas.microsoft.com/sharepoint/">
+  <MetaData>
+    <ContentTypes>
+      
+      
+    <ContentType ID="0x0100a4606e6760c84785b8e005cc136e8e85" Name="ListFieldsContentType"><FieldRefs><FieldRef ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" Name="Title" /><FieldRef ID="{7dd81629-06a8-4721-b8ce-741a24e461b6}" Name="Description" /><FieldRef ID="{c6e2aa82-ac0d-4714-a2cb-8a5625b124ab}" Name="Assignee" /><FieldRef ID="{c54b4980-bebd-4f15-b2eb-c749d9b97d44}" Name="Reporter" /><FieldRef ID="{057d1132-ebd4-48d0-8438-53dbafcd7299}" Name="Status" /><FieldRef ID="{a61b3d88-e046-44ce-994e-dd610bc20d56}" Name="Priority" /><FieldRef ID="{908eb9fb-04c4-45c9-90a0-00817984a191}" Name="AcceptanceTestCriteria" /><FieldRef ID="{83e1c78a-e49e-4b28-9e5d-d4ed5bddc0b5}" Name="Sprint" /></FieldRefs></ContentType><ContentTypeRef ID="0x01">
+        <Folder TargetName="Item" />
+      </ContentTypeRef><ContentTypeRef ID="0x0120" /></ContentTypes>
+    <Fields>
+      
+    <Field ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" Type="Text" Name="Title" DisplayName="$Resources:core,Title;" Required="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="Title" MaxLength="255" /><Field Name="Description" ID="{7dd81629-06a8-4721-b8ce-741a24e461b6}" DisplayName="Description" Type="Note" /><Field Name="Assignee" ID="{c6e2aa82-ac0d-4714-a2cb-8a5625b124ab}" DisplayName="Assignee" Type="User" List="UserInfo" /><Field Name="Reporter" ID="{c54b4980-bebd-4f15-b2eb-c749d9b97d44}" DisplayName="Reporter" Type="User" List="UserInfo" /><Field Name="Status" ID="{057d1132-ebd4-48d0-8438-53dbafcd7299}" DisplayName="Status" Type="Choice" Required="FALSE"><CHOICES><CHOICE>Open</CHOICE><CHOICE>In Development</CHOICE><CHOICE>Pending Code Review</CHOICE><CHOICE>In QA</CHOICE><CHOICE>Pending Prod Deploy</CHOICE><CHOICE>In Prod</CHOICE><CHOICE>Closed</CHOICE><CHOICE>Failed</CHOICE></CHOICES></Field><Field Name="Priority" ID="{a61b3d88-e046-44ce-994e-dd610bc20d56}" DisplayName="Priority" Type="Choice" Required="FALSE" Format="Dropdown"><CHOICES><CHOICE>Blocker</CHOICE><CHOICE>Critical</CHOICE><CHOICE>Major</CHOICE><CHOICE>Trivial</CHOICE><CHOICE>Minor</CHOICE></CHOICES></Field><Field Name="AcceptanceTestCriteria" ID="{908eb9fb-04c4-45c9-90a0-00817984a191}" DisplayName="Acceptance Test Criteria" Type="Note" /><Field Name="Sprint" ID="{83e1c78a-e49e-4b28-9e5d-d4ed5bddc0b5}" DisplayName="Sprint" Type="Text" /></Fields>
+    <Views>
+      
+      
+    <View BaseViewID="0" Type="HTML" MobileView="TRUE" TabularView="FALSE">
+        <Toolbar Type="Standard" />
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <ViewFields>
+          
+        <FieldRef Name="LinkTitleNoMenu"></FieldRef></ViewFields>
+        <Query>
+          <OrderBy>
+            
+          <FieldRef Name="Modified" Ascending="FALSE"></FieldRef></OrderBy>
+        </Query>
+        <ParameterBindings>
+          <ParameterBinding Name="AddNewAnnouncement" Location="Resource(wss,addnewitem)" />
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_ONET_HOME)" />
+        </ParameterBindings>
+      </View><View BaseViewID="1" Type="HTML" WebPartZoneID="Main" DisplayName="$Resources:core,objectiv_schema_mwsidcamlidC24;" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" SetupPath="pages\viewpage.aspx" ImageUrl="/_layouts/15/images/generic.png?rev=23" Url="AllItems.aspx">
+        <Toolbar Type="Standard" />
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <JSLink>clienttemplates.js</JSLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <ViewFields>
+          
+        <FieldRef Name="LinkTitle"></FieldRef><FieldRef Name="Description" /><FieldRef Name="Priority" /><FieldRef Name="Assignee" /><FieldRef Name="Reporter" /><FieldRef Name="Status" /><FieldRef Name="AcceptanceTestCriteria" /><FieldRef Name="Sprint" /></ViewFields>
+        <Query>
+          <OrderBy>
+            
+          <FieldRef Name="ID"></FieldRef></OrderBy>
+        </Query>
+        <ParameterBindings>
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_DEFAULT)" />
+        </ParameterBindings>
+      </View></Views>
+    <Forms>
+      <Form Type="DisplayForm" Url="DispForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="EditForm" Url="EditForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="NewForm" Url="NewForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+    </Forms>
+  </MetaData>
+</List>

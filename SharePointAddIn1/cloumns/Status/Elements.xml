@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">  
+  <Field
+       ID="{057d1132-ebd4-48d0-8438-53dbafcd7299}"
+       Name="Status"
+       DisplayName="Status"
+       Type="Choice"
+       Format="Dropdown"
+       Required="FALSE"
+       Group="Custom Site Columns">
+    <CHOICES>
+      <CHOICE>Open</CHOICE>
+      <CHOICE>In Development</CHOICE>
+      <CHOICE>Pending Code Review</CHOICE>
+      <CHOICE>In QA</CHOICE>
+      <CHOICE>Pending Prod Deploy</CHOICE>
+      <CHOICE>In Prod</CHOICE>
+      <CHOICE>Closed</CHOICE>
+      <CHOICE>Failed</CHOICE>
+    </CHOICES>
+  </Field>
+</Elements>

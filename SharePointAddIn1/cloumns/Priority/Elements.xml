@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">  
+  <Field
+       ID="{a61b3d88-e046-44ce-994e-dd610bc20d56}"
+       Name="Priority"
+       DisplayName="Priority"
+        Type="Choice"
+       Format="Dropdown"
+       Required="FALSE"
+       Group="Custom Site Columns">
+    <CHOICES>
+      <CHOICE>Blocker</CHOICE>
+      <CHOICE>Critical</CHOICE>
+      <CHOICE>Major</CHOICE>
+      <CHOICE>Trivial</CHOICE>
+      <CHOICE>Minor</CHOICE>
+    </CHOICES>
+  </Field>
+</Elements>
